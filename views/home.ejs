@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <%= titlePage %></title>
+  <link rel="stylesheet" href="style/styles.css">
+</head>
+<body> 
+<div class="box" id="heading">
+   <h1> <%= listTittle %></h1>
+</div>
+   
+<div class="box">
+   <ul>
+    <%  for (var i=0; i<ITEM.length; i++) { %>
+      <div class="item">
+         <input type="checkbox">
+         <p> <%= ITEM[i] %></p>
+      </div>
+    
+    <%  } %>
+   </ul>
+   <form action="/" method="post" class="item">
+      <input type="text" name="newItem" placeholder="New Item" autocomplete="off"> <br>
+      <button type="submit" name="list" value= <%= titlePage %> >+</button>
+   </form>
+</div>
+
+
+</body>
+</html>
